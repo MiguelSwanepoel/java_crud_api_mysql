@@ -1,9 +1,6 @@
 package com.example.java_crud_api_mysql;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 public class Student {
     @Id
