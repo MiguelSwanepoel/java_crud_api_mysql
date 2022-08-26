@@ -1,6 +1,6 @@
 package com.example.java_crud_api_mysql.service;
 
-import com.example.java_crud_api_mysql.Student;
+import com.example.java_crud_api_mysql.models.Student;
 import com.example.java_crud_api_mysql.repository.StudentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

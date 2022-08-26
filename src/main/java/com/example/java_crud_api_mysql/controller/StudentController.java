@@ -1,6 +1,6 @@
 package com.example.java_crud_api_mysql.controller;
 
-import com.example.java_crud_api_mysql.Student;
+import com.example.java_crud_api_mysql.models.Student;
 import com.example.java_crud_api_mysql.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class StudentController {
 
     // END POINT TO ADD NEW EMPLOYEE
     @PostMapping(value = "/addStudent")
-    public void addNewStudent(@RequestBody com.example.java_crud_api_mysql.Student empObj){
+    public void addNewStudent(@RequestBody com.example.java_crud_api_mysql.models.Student empObj){
         studentService.addNewStudent(empObj);
     }
 
