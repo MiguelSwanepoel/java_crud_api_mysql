@@ -8,39 +8,36 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+
 @RestController
 public class AdministratorController {
 
     @Autowired
-    private AdministratorService administratorService;
+    private AdministratorService adminService;
 
-    // END POINT TO FETCH ALL EMPLOYEES
-    @GetMapping(value = "/allAdministrator")
-    public List<Administrator> findAllAdministrator(){
-        return administratorService.getAllAdministrators();
+    @GetMapping(value = "/allAdministrators")
+    public List<Administrator> findAllAdministrators(){
+        return adminService.getAllAdministrators();
     }
 
-    // END POINT TO FETCH SINGLE EMPLOYEE
     @GetMapping(value = "/findAdministrator/{id}")
     public Optional<Administrator> findAdministratorById(@PathVariable(value = "id") Long admId){
-        return AdministratorService.getAdministratorById(admId);
+        return adminService.getAdministratorById(admId);
     }
 
-    // END POINT TO ADD NEW EMPLOYEE
     @PostMapping(value = "/addAdministrator")
     public void addNewAdministrator(@RequestBody com.example.java_crud_api_mysql.models.Administrator admObj){
-        AdministratorService.addNewAdministrator(admObj);
+        adminService.addNewAdministrator(admObj);
     }
 
-    // END POINT TO UPDATE AN EMPLOYEE
     @PutMapping(value = "/updateAdministrator")
-    public void updateNewStudent(@RequestBody Administrator admObj){
-        administratorService.updateAdministratorById(admObj);
+    public void updateNewAdministrator(@RequestBody Administrator admObj){
+        adminService.updateAdministratorById(admObj);
     }
 
-    // END POINT TO DELETE AN EMPLOYEE
     @DeleteMapping(value = "/deleteAdministrator")
     public void deleteNewAdministrator(@RequestBody Administrator admObj){
-        AdministratorService.deleteAdministratorById(admObj);
+        adminService.deleteAdministratorById(admObj);
     }
 }
+

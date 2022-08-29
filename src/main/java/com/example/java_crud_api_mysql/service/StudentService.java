@@ -15,27 +15,22 @@ public class StudentService {
     private StudentRepository studentRepository;
 
 
-    // FETCHING ALL EMPLOYEE DATA
     public List<Student> getAllStudents(){
         return studentRepository.findAll();
     }
 
-    // FETCHING EMPLOYEE BY ID
     public Optional<Student> getStudentById(Long stdId){
         return studentRepository.findById(stdId);
     }
 
-    // ADD NEW EMPLOYEE
     public void addNewStudent(Student stdObj){
         studentRepository.save(stdObj);
     }
-
-    // DELETING EMPLOYEE BY ID
+    
     public void deleteStudentById(Student studentObj){
         studentRepository.deleteById(studentObj.getId());
     }
 
-    // UPDATING EMPLOYEE BY ID
     public void updateStudentById(Student studentObj){
         studentRepository.save(studentObj);
     }

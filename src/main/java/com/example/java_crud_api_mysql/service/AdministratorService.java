@@ -13,28 +13,22 @@ public class AdministratorService {
     @Autowired
     private AdministratorRepository administratorRepository;
 
-
-    // FETCHING ALL EMPLOYEE DATA
     public List<Administrator> getAllAdministrators(){
         return administratorRepository.findAll();
     }
 
-    // FETCHING EMPLOYEE BY ID
     public Optional<Administrator> getAdministratorById(Long admId){
         return administratorRepository.findById(admId);
     }
 
-    // ADD NEW EMPLOYEE
     public void addNewAdministrator(Administrator admObj){
         administratorRepository.save(admObj);
     }
 
-    // DELETING EMPLOYEE BY ID
     public void deleteAdministratorById(Administrator administratorObj){
         administratorRepository.deleteById(administratorObj.getId());
     }
 
-    // UPDATING EMPLOYEE BY ID
     public void updateAdministratorById(Administrator administratorObj){
         administratorRepository.save(administratorObj);
     }
