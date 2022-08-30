@@ -1,4 +1,5 @@
 package com.example.java_crud_api_mysql.service;
+
 import com.example.java_crud_api_mysql.models.Registration;
 import com.example.java_crud_api_mysql.repository.RegistrationRepository;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+@Service
 public class Registrationservice {
     
     @Autowired

@@ -1,7 +1,5 @@
 package com.example.java_crud_api_mysql.repository;
 
-import javax.servlet.Registration;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
